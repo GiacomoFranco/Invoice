@@ -1,0 +1,11 @@
+:host {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 1.3rem 0 ;
+
+  app-party-involved {
+    flex: 1;
+    min-width: fit-content;
+  }
+}
