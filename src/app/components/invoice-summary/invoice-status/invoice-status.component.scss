@@ -1,5 +1,6 @@
 span {
-  display: block;
+  display: flex;
+  gap: 1rem;
   background-color: var(--dark-green);
   padding: .7rem 1.3rem;
   border-radius: 1.2rem;
@@ -7,4 +8,8 @@ span {
   font-weight: 500;
   color: var(--main-black);
   width: fit-content;
+
+  img {
+    width: 1.5rem;
+  }
 }
