@@ -5,10 +5,11 @@
   background-color: var(--main-green);
 
   .summary-identifier-element {
-    img {
+    .invoice-icon {
       width: 6.7rem;
       aspect-ratio: 1 / 1;
       border-radius: 999rem;
+      background-color: var(--dark-green);
     }
 
     display: flex;
@@ -27,11 +28,16 @@
       .issued-date {
         display: flex;
         align-items: center;
-        gap: 1rem;
+        gap: .7rem;
 
-        img {
+        div {
           width: 2.2rem;
-          aspect-ratio: 1 / 1;
+          height: 2.2rem;
+          padding: .3rem;
+
+          img {
+            width: 100%;
+          }
         }
 
         p {

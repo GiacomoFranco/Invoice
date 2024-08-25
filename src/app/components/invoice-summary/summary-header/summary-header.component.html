@@ -1,9 +1,13 @@
 <div class="summary-identifier-element">
-  <img src="" alt="Invoice Icon">
+  <div class="invoice-icon">
+    <!-- <img src="" alt="Invoice Icon" class="invoice-icon"> -->
+  </div>
   <div class="summary-identifier">
     <h1>Invoice #{{invoiceID()}}</h1>
     <div class="issued-date">
-      <img src="" alt="Calendar">
+      <div>
+        <img src="/icons/dia-del-calendario.svg" alt="Calendar">
+      </div>
       <p>Issued date: {{ issuedDate() }}</p>
     </div>
   </div>
