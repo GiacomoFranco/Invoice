@@ -1,0 +1,44 @@
+:host {
+  display: flex;
+  flex-direction: space-between;
+  padding: 2.9rem 3.6rem;
+  background-color: var(--main-green);
+
+  .summary-identifier-element {
+    img {
+      width: 6.7rem;
+      aspect-ratio: 1 / 1;
+      border-radius: 999rem;
+    }
+
+    display: flex;
+    align-items: center;
+    gap: 2.7rem;
+    width: 100%;
+    color: var(--main-black);
+
+    .summary-identifier {
+      gap: .4rem;
+
+      h1 {
+        font-size: 2.7rem;
+      }
+
+      .issued-date {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        img {
+          width: 2.2rem;
+          aspect-ratio: 1 / 1;
+        }
+
+        p {
+          font-size: 1.7rem;
+        }
+      }
+    }
+
+  }
+}
