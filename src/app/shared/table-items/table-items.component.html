@@ -1,0 +1,27 @@
+<div class="table">
+  <div class="table-header">
+    <div class="row">
+      <div>ITEM</div>
+      <div>Price</div>
+      <div>QTY</div>
+      <div>TOTAL</div>
+      <div></div>
+    </div>
+  </div>
+  <div class="table-body">
+    @for(item of items(); track $index) {
+    <div class="row">
+      <div>Wood</div>
+      <div>$22.99</div>
+      <div>1</div>
+      <div>22.99</div>
+      <div (click)="deleteRow($index)">
+        <img src="/icons/papelera-xmark.svg" alt="Delete Item" />
+      </div>
+    </div>
+    }
+    <div class="add-row" (click)="addRow()">
+      <img src="/icons/add.svg" alt="Add Item">
+    </div>
+  </div>
+</div>
