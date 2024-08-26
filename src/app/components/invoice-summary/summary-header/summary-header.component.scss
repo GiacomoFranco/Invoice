@@ -2,20 +2,23 @@
   display: flex;
   padding: 2.9rem 3.6rem;
   background-color: var(--main-green);
+  flex-wrap: wrap;
+  gap: 2.7rem;
 
   .summary-identifier-element {
+    display: flex;
+    align-items: center;
+    gap: 2.7rem;
+    color: var(--main-black);
+    flex-shrink: 0;
+    flex-grow: 1;
+
     .invoice-icon {
       width: 6.7rem;
       aspect-ratio: 1 / 1;
       border-radius: 999rem;
       background-color: var(--dark-green);
     }
-
-    display: flex;
-    align-items: center;
-    gap: 2.7rem;
-    width: 100%;
-    color: var(--main-black);
 
     .summary-identifier {
       gap: .4rem;

@@ -51,6 +51,7 @@ label {
     height: 2.6rem;
     border: .1rem solid #6A6A6A;
     border-radius: 999rem;
+    flex-shrink: 0;
 
     .inner-radio {
       width: 100%;
