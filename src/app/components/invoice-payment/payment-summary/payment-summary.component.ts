@@ -41,5 +41,8 @@ export class PaymentSummaryComponent {
   payAction() {
     this.dialogService.openDialog();
     this.invoiceService.invoiceStatus.set('paid');
+    setTimeout(() => {
+      this.dialogService.closeDialog();
+    }, 5000);
   }
 }
