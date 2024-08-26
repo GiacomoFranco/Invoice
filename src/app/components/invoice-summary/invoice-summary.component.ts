@@ -20,4 +20,7 @@ export class InvoiceSummaryComponent {
 
   labors = computed<any[]>(() => this.invoiceService.labors());
   materials = computed<any[]>(() => this.invoiceService.materials());
+
+
+  sendInvoice() {}
 }

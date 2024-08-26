@@ -1,6 +1,12 @@
-<h3 class="party">From:</h3>
+<h3 class="party">{{ isTo() ? "To:" : "From:" }}</h3>
 <div class="party-information">
-  <p>{{ 'Company Name' }}</p>
-  <p>{{ 'Allocated' }} </p>
-  <p>{{ 'Info' }}</p>
+  @if (isTo()) {
+  <input type="text" value="Company Name" />
+  <input type="text" value="Email" />
+  <input type="text" value="Address" />
+  } @else {
+  <p>{{ "Sombra" }}</p>
+  <p>{{ "Medellín, Antioquia" }}</p>
+  <p>{{ "Edificio Xerox, Cra. 43A #15 SUR" }}</p>
+  }
 </div>
