@@ -1,0 +1,12 @@
+<h2 (click)="toggleActive('s')">Payment Method</h2>
+
+@for (paymentOption of paymentOptions(); track $index) {
+<app-payment-option
+  (click)="toggleActive($index)"
+  [option]="paymentOption.option"
+  [name]="paymentOption.name"
+  [logo]="paymentOption.logo"
+  [isSelected]="paymentOption.active"
+/>
+
+}

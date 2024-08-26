@@ -1,0 +1,10 @@
+<label [class.active]="isSelected()">
+  <span class="radio-button"><span class="inner-radio"></span></span>
+  <div class="payment-logo"></div>
+  <div class="payment-info">
+    <h3>{{ option() }}</h3>
+    @if (name()) {
+    <p>{{ name() }}</p>
+    }
+  </div>
+</label>
