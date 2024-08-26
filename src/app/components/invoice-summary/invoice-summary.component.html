@@ -1,6 +1,6 @@
 <app-summary-header/>
 <section>
   <app-parties-involved />
-  <app-quotation-field />
-  <app-quotation-field />
+  <app-quotation-field [items]="materials()"/>
+  <app-quotation-field quotationType="labors" [items]="labors()" />
 </section>

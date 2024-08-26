@@ -3,7 +3,7 @@
 <div class="payment-summary">
   <div class="payment">
     <h4>Payment</h4>
-    <p>$22.99</p>
+    <p>${{totalSumatory()}}</p>
   </div>
   <div class="discount">
     <h4>Discount</h4>
@@ -12,7 +12,7 @@
   <hr>
   <div class="total">
     <h3>Total Charge</h3>
-    <p>$22.99</p>
+    <p>${{total()}}</p>
   </div>
-  <button class="pay-button">Pay now {{'$122.99'}} ✨</button>
+  <button class="pay-button">Pay now ${{total()}} ✨</button>
 </div>

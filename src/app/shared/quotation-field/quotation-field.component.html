@@ -1,2 +1,2 @@
-<h2>{{ "Materials" }}</h2>
-<app-table-items />
+<h2>{{ title }}</h2>
+<app-table-items [tableType]="quotationType()" [items]="items()"/>
