@@ -26,6 +26,15 @@
         grid-template-columns: 2fr 1fr 1fr .8fr .3fr;
         grid-template-rows: 1fr;
 
+        input {
+          background-color: transparent;
+          border: none;
+          outline: none;
+          height: 100%;
+          font-size: 1.6rem;
+          color: var(--main-white);
+        }
+
         &:not(:first-child) {
           border-top: .1rem solid #707070;
         }

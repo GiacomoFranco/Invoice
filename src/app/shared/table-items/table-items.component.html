@@ -2,8 +2,8 @@
   <div class="table-header">
     <div class="row">
       <div>ITEM</div>
-      <div>Price</div>
-      <div>QTY</div>
+      <div>{{ tableType() === 'materials' ? 'PRICE' : 'HOUR'}}</div>
+      <div>{{ tableType() === 'materials' ? 'QTY' : 'RATE'}}</div>
       <div>TOTAL</div>
       <div></div>
     </div>
@@ -11,10 +11,10 @@
   <div class="table-body">
     @for(item of items(); track $index) {
     <div class="row">
-      <div>Wood</div>
-      <div>$22.99</div>
-      <div>1</div>
-      <div>22.99</div>
+      <input type="text" [value]="item.name" (blur)="updateValue($event.target, $index, 'name')">
+      <input type="number" [value]="item.price" (blur)="updateValue($event.target, $index, 'price')">
+      <input type="number" [value]="item.quantity" (keydown.enter)="addRow()" (blur)="updateValue($event.target, $index, 'quantity')">
+      <div> ${{ totalSumatory(item) !== 'NaN' ? totalSumatory(item) : '---' }}</div>
       <div (click)="deleteRow($index)">
         <img src="/icons/papelera-xmark.svg" alt="Delete Item" />
       </div>
