@@ -1,5 +1,6 @@
-import { Component, input } from '@angular/core';
+import { Component, computed, input } from '@angular/core';
 import { InvoiceStatusComponent } from "../invoice-status/invoice-status.component";
+import { InvoiceService } from '../../../services/invoice.service';
 
 @Component({
   selector: 'app-summary-header',
@@ -9,6 +10,8 @@ import { InvoiceStatusComponent } from "../invoice-status/invoice-status.compone
   styleUrl: './summary-header.component.scss'
 })
 export class SummaryHeaderComponent {
+  constructor(private invoiceService: InvoiceService) {}
   invoiceID = input<number>(3213123);
   issuedDate = input<string>('24.08.2024');
+  statusType = computed(() => this.invoiceService.invoiceStatus());
 }

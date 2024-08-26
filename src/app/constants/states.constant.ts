@@ -4,7 +4,7 @@ import {  IStates } from "../models/interfaces/state.interface";
 export const States: IStates = {
   paid: {
     slug: ESlugStates.paid,
-    status: EStates.overdue,
+    status: EStates.paid,
     icon: '/icons/marque-el-circulo.svg',
   },
   unpaid: {

@@ -3,16 +3,26 @@
 <div class="payment-summary">
   <div class="payment">
     <h4>Payment</h4>
-    <p>${{totalSumatory()}}</p>
+    <p>${{ totalSumatory() }}</p>
   </div>
   <div class="discount">
     <h4>Discount</h4>
     <p>10%</p>
   </div>
-  <hr>
+  <hr />
   <div class="total">
     <h3>Total Charge</h3>
-    <p>${{total()}}</p>
+    <p>${{ total() }}</p>
   </div>
-  <button class="pay-button">Pay now ${{total()}} ✨</button>
+  <button
+    class="pay-button"
+    [disabled]="invoiceStatus() === 'paid'"
+    (click)="payAction()"
+  >
+    {{ invoiceStatus() === "paid" ? "Already Paid 🥳" : "Pay now $" + total() + '✨' }}
+  </button>
 </div>
+
+@if(dialogState()) {
+<app-dialog [payment]="true" />
+}

@@ -58,6 +58,11 @@
       cursor: pointer;
       transition: .2s ease-in-out;
 
+      &.already-paid {
+        opacity: .3;
+        cursor: initial;
+      }
+
       &:hover {
         background-color: var(--dark-green);
       }

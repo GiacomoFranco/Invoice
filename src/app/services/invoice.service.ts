@@ -1,4 +1,5 @@
 import { computed, Injectable, signal } from '@angular/core';
+import { TStatusSlug } from '../models/types/states.type';
 
 @Injectable({
   providedIn: 'root',
@@ -43,4 +44,5 @@ export class InvoiceService {
 
   discount = signal(10);
   totalCharge = signal(0);
+  invoiceStatus = signal<TStatusSlug>('unpaid');
 }

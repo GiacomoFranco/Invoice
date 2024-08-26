@@ -1,0 +1,35 @@
+<div class="section-container">
+  <span
+    class="dialog"
+    [style.backgroundColor]="errorCode() ? '#fe9e9e' : 'var(--main-green)'"
+  >
+    @if (errorCode()) {
+    <div class="message">
+      <img src="/icons/error-alert.svg" alt="Error Alert" />
+      <p>
+        There was an error while sending the message, contact the administrator
+        and inform about the error <b>{{ errorCode() }}</b>
+      </p>
+    </div>
+    } @else {
+    <div class="message">
+      <img src="/icons/check-alert.svg" alt="Email sended" />
+      @if(payment()) {
+        <p>
+          Payment Recived, thanks for for preffering us 🥳✨
+        </p>
+      } @else {
+        <p>
+          Your message has been sendend successfully
+        </p>
+      }
+    </div>
+    }
+    <img
+      class="close-button"
+      src="/icons/close.svg"
+      alt="Cerrar alerta"
+      (click)="closeDialog()"
+    />
+  </span>
+</div>
